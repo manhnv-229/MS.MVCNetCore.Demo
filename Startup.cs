@@ -1,3 +1,7 @@
+﻿using JWTASPNetCore.Interfaces;
+using JWTASPNetCore.Middware;
+using JWTASPNetCore.Repository;
+using JWTASPNetCore.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -6,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using System.Net;
 using System.Text;
 
 namespace JWTASPNetCore
@@ -26,11 +31,15 @@ namespace JWTASPNetCore
             services.AddControllersWithViews();
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddTransient<ITokenService, TokenService>();
+            services.AddTransient<ICustomerRepository, CustomerRepository>();
 
+            // Cấu hình authen
             services.AddAuthentication(auth =>
             {
                 auth.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                //auth.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                // Thêm dòng này để khi truy cập vào page nào đó mà không có thông tin đăng nhập sẽ chuyển hướng về trang đăng nhập
+                // Xem thêm ở đoạn mã app.UseStatusCodePages phía dưới:
+                auth.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             })
             .AddJwtBearer(options =>
             {
@@ -61,15 +70,36 @@ namespace JWTASPNetCore
 
             app.UseSession();
 
+            //nvmanh: Xử lý add token cho các request được lưu trong session context:
             app.Use(async (context, next) =>
             {
                 var token = context.Session.GetString("Token");
                 if (!string.IsNullOrEmpty(token))
                 {
                     context.Request.Headers.Add("Authorization", "Bearer " + token);
+
                 }
                 await next();
             });
+
+            // nvmanh Chuyển đổi trang theo trạng thái trả về của Http Status Code:
+            app.UseStatusCodePages(async context => {
+                var request = context.HttpContext.Request;
+                var response = context.HttpContext.Response;
+
+                // Nếu page hoặc api gọi đến mà không được xác thực thì tự chuyển về trang login:
+                // .net core đã tự set mã trạng thái là 401 khi thông tin xác thực không hợp lệ hoặc thiếu rồi, chỉ việc bắt response ở đây và xử lý chuyển hướng
+                if (response.StatusCode == (int)HttpStatusCode.Unauthorized)
+                {
+                    response.Redirect("/");
+                   }
+            });
+
+            //app.UseMiddleware<ErrorHandlerMiddleware>();
+            //app.Run(async context =>
+            //{
+            //    await context.Response.WriteAsync("Hello from 2nd delegate.");
+            //});
 
             app.UseStaticFiles();
             app.UseRouting();

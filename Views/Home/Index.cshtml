@@ -1,6 +1,7 @@
 ﻿@model JWTASPNetCore.Models.UserModel
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Đăng nhập";
+    ViewBag.Error = null;
 }
 
 <hr />
@@ -24,7 +25,7 @@
         </form>
     </div>
 </div>
-
+<div class="error">@ViewBag.Error</div>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

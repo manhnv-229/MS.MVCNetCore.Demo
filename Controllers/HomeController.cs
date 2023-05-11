@@ -1,4 +1,5 @@
-﻿using JWTASPNetCore.Models;
+﻿using JWTASPNetCore.Interfaces;
+using JWTASPNetCore.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -45,6 +46,7 @@ namespace JWTASPNetCore.Controllers
 
                 if (generatedToken != null)
                 {
+                    // Lưu token vào context session
                     HttpContext.Session.SetString("Token", generatedToken);
                     return RedirectToAction("MainWindow");
                 }
@@ -69,6 +71,8 @@ namespace JWTASPNetCore.Controllers
         [HttpGet]
         public IActionResult MainWindow()
         {
+            // Vào main lấy token ngắm xem nó như thế nào
+            // Vì một lý do nào đó nếu mất token thì chuyển về trang index (đăng nhập)
             string token = HttpContext.Session.GetString("Token");
 
             if (token == null)
@@ -88,7 +92,7 @@ namespace JWTASPNetCore.Controllers
 
         public IActionResult Error()
         {
-            ViewBag.Message = "An error occured...";
+            ViewBag.Message = "Lỗi";
             return View();
         }
         private string BuildMessage(string stringToSplit, int chunkSize)
@@ -96,7 +100,7 @@ namespace JWTASPNetCore.Controllers
             var data = Enumerable.Range(0, stringToSplit.Length / chunkSize)
                 .Select(i => stringToSplit.Substring(i * chunkSize, chunkSize));
 
-            string result = "The generated token is:";
+            string result = "Token của phiên đăng nhập là:";
 
             foreach (string str in data)
             {

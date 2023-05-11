@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {
+    "net6.0": {
       "Humanizer.Core/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -7892,7 +7892,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net5.0": [
+    "net6.0": [
       "Microsoft.AspNetCore.Authentication >= 2.2.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.6",
       "Microsoft.AspNetCore.Session >= 2.2.0",
@@ -7900,35 +7900,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nvmanh\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\manhn\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PRIVATE\\GitHub\\MS.MVCNetCore.Demo\\MS.MVCNetCore.Demo\\JWTASPNetCore.csproj",
+      "projectUniqueName": "D:\\WORKS\\GitHub\\MS.MVCNetCoreDemo\\MS.MVCNetCore.Demo\\JWTASPNetCore.csproj",
       "projectName": "JWTASPNetCore",
-      "projectPath": "D:\\PRIVATE\\GitHub\\MS.MVCNetCore.Demo\\MS.MVCNetCore.Demo\\JWTASPNetCore.csproj",
-      "packagesPath": "C:\\Users\\nvmanh\\.nuget\\packages\\",
-      "outputPath": "D:\\PRIVATE\\GitHub\\MS.MVCNetCore.Demo\\MS.MVCNetCore.Demo\\obj\\",
+      "projectPath": "D:\\WORKS\\GitHub\\MS.MVCNetCoreDemo\\MS.MVCNetCore.Demo\\JWTASPNetCore.csproj",
+      "packagesPath": "C:\\Users\\manhn\\.nuget\\packages\\",
+      "outputPath": "D:\\WORKS\\GitHub\\MS.MVCNetCoreDemo\\MS.MVCNetCore.Demo\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\nvmanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\manhn\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net5.0"
+        "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "projectReferences": {}
         }
       },
@@ -7939,8 +7935,8 @@
       }
     },
     "frameworks": {
-      "net5.0": {
-        "targetAlias": "net5.0",
+      "net6.0": {
+        "targetAlias": "net6.0",
         "dependencies": {
           "Microsoft.AspNetCore.Authentication": {
             "target": "Package",
@@ -7978,7 +7974,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
