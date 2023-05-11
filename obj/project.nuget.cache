@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NAdivwJ+1U9KOdR8byauzaYGyzJg4IcirZwInN0lK1S6h2c6+BiaR6UKbDXrVWwbmteISxJj/+T+f8u5vX4jOQ==",
+  "dgSpecHash": "X3rtLqNdTxFEtYK8h4l23HgT0e8wk0JtRIUGljevMyLpe5dsGFfOHtyOjE0EWWEZTudeRjX7YzkBQsSAYQyXCg==",
   "success": true,
-  "projectFilePath": "D:\\~Temp\\DEMO\\JWTMVC\\jwt-aspnetcore\\jwt-aspnetcore\\JWTASPNetCore.csproj",
+  "projectFilePath": "D:\\PRIVATE\\GitHub\\MS.MVCNetCore.Demo\\MS.MVCNetCore.Demo\\JWTASPNetCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nvmanh\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\nvmanh\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

@@ -7906,11 +7906,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\~Temp\\DEMO\\JWTMVC\\jwt-aspnetcore\\jwt-aspnetcore\\JWTASPNetCore.csproj",
+      "projectUniqueName": "D:\\PRIVATE\\GitHub\\MS.MVCNetCore.Demo\\MS.MVCNetCore.Demo\\JWTASPNetCore.csproj",
       "projectName": "JWTASPNetCore",
-      "projectPath": "D:\\~Temp\\DEMO\\JWTMVC\\jwt-aspnetcore\\jwt-aspnetcore\\JWTASPNetCore.csproj",
+      "projectPath": "D:\\PRIVATE\\GitHub\\MS.MVCNetCore.Demo\\MS.MVCNetCore.Demo\\JWTASPNetCore.csproj",
       "packagesPath": "C:\\Users\\nvmanh\\.nuget\\packages\\",
-      "outputPath": "D:\\~Temp\\DEMO\\JWTMVC\\jwt-aspnetcore\\jwt-aspnetcore\\obj\\",
+      "outputPath": "D:\\PRIVATE\\GitHub\\MS.MVCNetCore.Demo\\MS.MVCNetCore.Demo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
