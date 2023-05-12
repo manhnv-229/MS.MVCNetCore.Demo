@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WORKS\\GitHub\\MS.MVCNetCoreDemo\\MS.MVCNetCore.Demo\\JWTASPNetCore.csproj": {}
+    "D:\\PRIVATE\\GitHub\\MS.MVCNetCore.Demo\\MS.MVCNetCore.Demo\\JWTASPNetCore.csproj": {}
   },
   "projects": {
-    "D:\\WORKS\\GitHub\\MS.MVCNetCoreDemo\\MS.MVCNetCore.Demo\\JWTASPNetCore.csproj": {
+    "D:\\PRIVATE\\GitHub\\MS.MVCNetCore.Demo\\MS.MVCNetCore.Demo\\JWTASPNetCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WORKS\\GitHub\\MS.MVCNetCoreDemo\\MS.MVCNetCore.Demo\\JWTASPNetCore.csproj",
+        "projectUniqueName": "D:\\PRIVATE\\GitHub\\MS.MVCNetCore.Demo\\MS.MVCNetCore.Demo\\JWTASPNetCore.csproj",
         "projectName": "JWTASPNetCore",
-        "projectPath": "D:\\WORKS\\GitHub\\MS.MVCNetCoreDemo\\MS.MVCNetCore.Demo\\JWTASPNetCore.csproj",
-        "packagesPath": "C:\\Users\\manhn\\.nuget\\packages\\",
-        "outputPath": "D:\\WORKS\\GitHub\\MS.MVCNetCoreDemo\\MS.MVCNetCore.Demo\\obj\\",
+        "projectPath": "D:\\PRIVATE\\GitHub\\MS.MVCNetCore.Demo\\MS.MVCNetCore.Demo\\JWTASPNetCore.csproj",
+        "packagesPath": "C:\\Users\\nvmanh\\.nuget\\packages\\",
+        "outputPath": "D:\\PRIVATE\\GitHub\\MS.MVCNetCore.Demo\\MS.MVCNetCore.Demo\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\manhn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nvmanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -76,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
